@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('httpResponse/', include('httpResponse.urls')),
     path('renderApp/', include('renderApp.urls')),
+    path('websiteApp/', include('websiteApp.urls')),
 ]
