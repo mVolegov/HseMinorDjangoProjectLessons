@@ -1,0 +1,43 @@
+{% extends "../carWebsiteApp/layout.html" %}
+
+
+{% block title %}
+    <title>Редактирование</title>
+{% endblock %}
+
+
+{% block main %}
+    <div id="pk">{{ last_url_element }}</div>
+    <h5 class="card-title text-center">Форма внесения заявки на редактирование</h5>
+
+    <form action="https://yandex.ru/search/" method='get' target='_blank'>
+
+        <div class="row mt-5">
+            <div class="col-sm-6 mb-3">
+                <label class="form-label" for="companyName">Введите название компании для редактирования</label>
+                <input class="form-control" id="companyName" type="text" name="text" value="Audi">
+                <div class="form-text" id="secondName">Это необходимо для понимания какую часть редактировать</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <label class="form-label" for="emailAddress">Email address</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input class="form-control" id="emailAddress" type="email" name="email" value="name@ya.ru"
+                           aria-describedby="basic-addon1">
+                </div>
+                <div class="form-text" id="emailHelp">По введенному e-mail мы с вами свяжемся</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="changesTextArea">Правки, изменения, предложения</label>
+            <textarea rows="10" class="form-control" id="changesTextArea" name="changes" value="123"></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input class="form-check-input" id="exampleCheck1" type="checkbox" name="checkbox">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button class="btn btn-primary" type="submit">Отправить</button>
+
+    </form>
+{% endblock %}

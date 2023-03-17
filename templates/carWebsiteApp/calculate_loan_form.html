@@ -1,0 +1,62 @@
+{% extends "../carWebsiteApp/layout.html" %}
+
+
+{% block title %}
+    <title>Кредит</title>
+{% endblock %}
+
+
+{% block main %}
+    <div id="pk">{{ last_url_element }}</div>
+    <h5 class="card-title text-center">Кредит</h5>
+    <br>
+    <p>Рассчитать ежемесячный платеж</p>
+
+    {#    <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" id="UserEnter" name="UserEnter" target="_blank">#}
+
+    {#    <form action="https://www.bing.com/search" id="UserEnter" name="UserEnter" target="_blank">#}
+    {#        <ul class="list-group">#}
+    {#            <li class="list-group-item disabled"><input name="q" type="hidden"></li>#}
+    {#            <li class="list-group-item"><label>Стоимость автомобиля: <input id="car_price" name="car_price"#}
+    {#                                                                            type="number" value=10></label></li>#}
+    {#            <li class="list-group-item"><label>Срок погашения: <input id="period" name="period" type="number" value=20></label>#}
+    {#            </li>#}
+    {#            <li class="list-group-item"><label>Процентная ставка: <input id="interest_rate" name="interest_rate"#}
+    {#                                                                         type="number" value=21></label></li>#}
+    {##}
+    {#            <li class="list-group-item disabled"><input name="result" type="hidden" value=""></li>#}
+    {#            <li class="list-group-item"><label><input id="verify" type="button" value="Рассчитать"></label></li>#}
+    {#            <li class="list-group-item"><label><input id="send" type="button" value="Отправить в банк"></label></li>#}
+    {#        </ul>#}
+    {#    </form>#}
+
+    <form action="https://www.bing.com/search" id="UserEnter" name="UserEnter" target="_blank">
+        <input name="q" type="hidden">
+        <div class="row mt-5">
+            <div class="col-sm-4">
+                <label class="form-label" for="car_price">Стоимость автомобиля</label>
+                <input class="form-control" id="car_price" name="car_price" type="number" value=300000 min="1">
+            </div>
+            <div class="col-sm-4">
+                <label class="form-label" for="period">Срок погашения (месяцы)</label>
+                <input class="form-control" id="period" name="period" type="number" value=18 min="1">
+            </div>
+            <div class="col-sm-4">
+                <label class="form-label" for="interest_rate">Процентная ставка (%)</label>
+                <input class="form-control" id="interest_rate" name="interest_rate" type="number" value="15" min="0">
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <input name="result" type="hidden" value="">
+            <label><input class="btn btn-outline-success" id="verify" type="button" value="Рассчитать"></label>
+            <label><input class="btn btn-warning" id="send" type="button" value="Отправить в банк"></label>
+        </div>
+    </form>
+
+
+    <p class="h6 mt-5 text-center" id="result">Размер ежемесячного платежа: </p>
+    {% load static %}
+    <script src="{% static 'CarWebSiteApp/js/loan.js' %}"></script>
+{% endblock %}
+

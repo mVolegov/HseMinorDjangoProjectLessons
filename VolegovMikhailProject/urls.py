@@ -21,4 +21,5 @@ urlpatterns = [
     path('httpResponse/', include('httpResponse.urls')),
     path('renderApp/', include('renderApp.urls')),
     path('websiteApp/', include('websiteApp.urls')),
+    path('carWebsiteApp/', include('carWebsiteApp.urls')),
 ]

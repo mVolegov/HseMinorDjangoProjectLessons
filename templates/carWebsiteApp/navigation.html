@@ -1,0 +1,51 @@
+<ul class="nav nav-pills flex-column mb-auto">
+    {#    <li class="nav-item">#}
+    {#        <a id="home" class="nav-link" href="{% url 'carWebsiteApp:carWebsiteApp-home' %}">Начальная</a>#}
+    {#    </li>#}
+    {#    <li class="nav-item">#}
+    {#        <a id="form" class="nav-link" href="{% url 'carWebsiteApp:carWebsiteApp-bwm_history' %}">BMW</a></li>#}
+    {#    <li class="nav-item">#}
+    {#        <a id="form_abc" class="nav-link" href="{% url 'carWebsiteApp:carWebsiteApp-audi_history' %}">Audi</a>#}
+    {#    </li>#}
+    {#    <li class="nav-item">#}
+    {#        <a id="store" class="nav-link" href="{% url 'carWebsiteApp:carWebsiteApp-edit_history_form' %}">Редактировать</a>#}
+    {#    </li>#}
+
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand">История немецких автомобилей</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-1">
+                        <a id="home" class="nav-link"
+                           href="{% url 'carWebsiteApp:carWebsiteApp-home' %}">Главная</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a id="bmw_history" class="nav-link"
+                           href="{% url 'carWebsiteApp:carWebsiteApp-bmw_history' %}">BMW</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a id="audi_history" class="nav-link"
+                           href="{% url 'carWebsiteApp:carWebsiteApp-audi_history' %}">Audi</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a id="mercedes_history" class="nav-link"
+                           href="{% url 'carWebsiteApp:carWebsiteApp-mercedes_history' %}">Mercedes-Benz</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a id="volkswagen_history" class="nav-link"
+                           href="{% url 'carWebsiteApp:carWebsiteApp-volkswagen_history' %}">Volkswagen</a>
+                    </li>
+                </ul>
+{#                <form class="d-flex mx-2" role="search">#}
+{#                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#                    <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#                </form>#}
+                <a id="edit_history_form" class="nav-link"
+                   href="{% url 'carWebsiteApp:carWebsiteApp-edit_history_form' %}">Заявка на редактирование</a>
+                <a id="calculate_loan_form" class="nav-link"
+                   href="{% url 'carWebsiteApp:carWebsiteApp-calculate_loan_form' %}">Рассчитать кредит</a>
+            </div>
+        </div>
+    </nav>
+</ul>
